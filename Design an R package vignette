@@ -1,0 +1,50 @@
+Design an R package vignette
+This document is the vignette skeleton dist_conversion.Rmd created in the last exercise. It includes the most familiar parts of an R Markdown document:
+
+A YAML header that contains some metadata
+Narrative text written in Markdown
+R code chunks surrounded by ```{r} and ```; a syntax that comes from the knitr package
+To develop package documentation for the unitConverter package, it is vital to show users many different ways to work with the functionality of the package. Vignettes serve that purpose in both showing examples and also adding explanatory text and clarifications in an easy-to-read format.
+
+Instructions
+Create a heading on line 22 of "Convert feet to meters" with no subheadings.
+Add "We can use the package to convert 5 feet into meters as follows." after the the heading, leading one line of space.
+In the dist-example chunk, make the appropriate call to the dist_converter() function to achieve the task you have described.
+At the end, output the result inline with "Five feet is r dist_result meters."
+
+
+
+
+
+
+___
+title: "Distance Conversion Examples"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Distance Conversion Examples}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+___
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(unitConverter)
+```
+
+# Convert feet to meters
+
+We can use the package to convert 5 feet into meters as follows.
+
+```{r dist-example}
+dist_result <- dist_converter(dist_value = 5, unit_from = "feet", unit_to = "meters")
+```
+
+Five feet is `r dist_result` meters.
+
+
