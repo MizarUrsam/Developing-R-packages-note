@@ -1,0 +1,20 @@
+Generating Help Files and Vignettes, chapter 3 of the course Developing R Packages. Here is what you covered in your last lesson:
+
+You learned about the importance of vignettes in R package documentation, 
+which are detailed R Markdown documents that showcase how to use a package's functionality. 
+These documents are crucial for providing users with practical examples and comprehensive tutorials, 
+making it easier for them to understand and apply the package's features in real-world scenarios. 
+Key points covered include:
+
+Vignette Basics: A vignette is not just recommended but considered best practice in R package development for its role in explaining and demonstrating package functionality.
+Creating Vignettes: You discovered that vignettes should be concise, well-organized into sections, and include both motivating text and R code examples to illustrate package use.
+Exploring Vignettes with browseVignettes(): The function browseVignettes("dplyr") was used as an example to show how you can explore existing vignettes from other packages, providing insights into effective documentation practices.
+Vignette Metadata: The lesson explained the significance of the YAML header in vignettes, detailing the title, output format, description, and additional metadata, which are essential for rendering and understanding the vignette's purpose and content.
+Differences Between Vignettes and Articles: It was clarified that vignettes focus on package-specific functionality with hands-on examples, unlike articles that cover broader topics and are often published separately.
+
+# Browse vignettes for ggplot2 package
+browseVignettes("ggplot2")
+
+This code snippet exemplifies how to access vignettes for a specific package (ggplot2 in this case), highlighting the practical step of engaging with existing documentation to learn best practices.
+
+The goal of the next lesson is to learn about enhancing R package documentation by creating informative and engaging vignettes.
