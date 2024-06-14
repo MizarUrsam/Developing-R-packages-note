@@ -47,4 +47,12 @@ dist_result <- dist_converter(dist_value = 5, unit_from = "feet", unit_to = "met
 
 Five feet is `r dist_result` meters.
 
-
+# Build all package vignettes
+library(devtools)
+download.file("https://assets.datacamp.com/production/repositories/6265/datasets/705a3cf2866fa0c7514793ab0ba275296968998a/ch3-ex15.zip", destfile = "file.zip")
+unzip("file.zip")
+unlink("file.zip", recursive = TRUE)
+unlink("__MACOSX", recursive = TRUE)
+setwd("unitConverter")
+# Build all package vignettes
+build_vignettes()
