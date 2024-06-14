@@ -47,6 +47,22 @@ dist_result <- dist_converter(dist_value = 5, unit_from = "feet", unit_to = "met
 
 Five feet is `r dist_result` meters.
 
+
+
+
+
+####--------Build package vignettes--------####
+
+Using Knit HTML (or rmarkdown::render()) is one way to test the build-ability of your vignette. 
+It is best to use the devtools package functionality to build all vignettes. 
+Doing so allows you to automatically build and update the vignettes, 
+ensuring that they are always up to date with the latest changes in your unitConverter package. 
+This simplifies the workflow of creating, testing, and maintaining vignettes, saving time and effort in the documentation process.
+
+The devtools package has been loaded for you along with the package so far, including both dist_conversion.Rmd and func_conversion.Rmd files.
+
+
+
 # Build all package vignettes
 library(devtools)
 download.file("https://assets.datacamp.com/production/repositories/6265/datasets/705a3cf2866fa0c7514793ab0ba275296968998a/ch3-ex15.zip", destfile = "file.zip")
